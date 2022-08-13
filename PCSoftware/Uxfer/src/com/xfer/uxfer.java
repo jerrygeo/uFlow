@@ -22,16 +22,16 @@ public class uxfer {
         boolean gotEndMarker;
         Scanner consoleIn = new Scanner(System.in);
 
-        var date = LocalDate.now();
+        LocalDate date = LocalDate.now();
         String sDate = String.valueOf(date);
         String fileName = "U" + sDate + ".csv";
         FileWriter allData = new FileWriter(fileName);
         System.out.print("Enter wifi address: ");
         String wifiAddress = consoleIn.nextLine();
 
-        try (var socket = new Socket(wifiAddress, 23)) {
-            var in = new Scanner(socket.getInputStream());
-            var out = new PrintWriter(socket.getOutputStream(), true);
+        try (Socket socket = new Socket(wifiAddress, 23)) {
+            Scanner in = new Scanner(socket.getInputStream());
+            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             out.println("X U");
             gotEndMarker = false;
             while (!gotEndMarker) {
