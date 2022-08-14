@@ -9,7 +9,7 @@
  *       Record # Description            Name        Format       Example
  *          1      Software version,     VERSION      %4.2f          2.01
  *          2      Scale Calibration     CALFACTOR     %d            4900
- *          3      16 bit checksum       CHECKSUM      %x            A93F
+ *          3      16 bit checksum       CHECKSUM      %d           43327
  *       
  *       
  *******************************/
