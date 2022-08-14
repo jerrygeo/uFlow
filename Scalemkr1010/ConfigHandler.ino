@@ -25,7 +25,7 @@ struct ConfigStruct defaultCfg = {
 /*!   Function  getCksum
  *      Inputs  ConfigStruct myConfig
  *      Outputs Returns checksum
- *      Processing - Checksum is computed on myConfig as sum modulo 256
+ *      Processing - Checksum is computed on myConfig as sum modulo 0x1000
 *                     of the first 8 bytes of myConfig
  *                   
  */
